@@ -1,20 +1,19 @@
 /* =========================================================
-   PELUQUERÍA ELEGANCE — Reserva de turnos
-   HTML + CSS + JS puro (sin frameworks)
+   PELUQUERÍA — Reserva de turnos
    ========================================================= */
 
 /* ---------- CONFIGURACIÓN EDITABLE ---------- */
 const CONFIG = {
-  nombreNegocio: "Elegance",
-  telefonoWhatsApp: "3435451818", // sin + ni espacios
-  telefonoVisible: "343 545-1818",
+  nombreNegocio: "Nachy's Peluquería y Barbería",
+  telefonoWhatsApp: "3435406399",
+  telefonoVisible: "3435-406399",
   direccion: "Nogoyá, Entre Ríos",
-  instagram: "barretojuan_2",
+  instagram: "nachysnazareno",
   intervaloMinutos: 20,
   horarios: {
     // 0 = domingo, 1 = lunes ... 6 = sábado
     // cada día puede tener varios bloques: [{inicio, fin}, ...]
-    0: null, // Domingo cerrado
+    0: null,
     1: [
       { inicio: "10:00", fin: "12:30" },
       { inicio: "17:00", fin: "21:30" },
