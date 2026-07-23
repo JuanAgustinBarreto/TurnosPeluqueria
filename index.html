@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peluquería Elegance — Reserva tu turno</title>
+  <meta name="description" content="Reservá tu turno en Peluquería Elegance. Cortes, color, barba y más." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ============ HEADER ============ -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">E</div>
+        <div>
+          <h1 class="brand-name" id="brandName">Elegance</h1>
+          <p class="brand-tag">Peluquería & Estilo</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#servicios">Servicios</a>
+        <a href="#reserva">Reservar</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <span class="pill">Reservas online 24/7</span>
+        <h2>Tu estilo, nuestra pasión.</h2>
+        <p>Reservá tu turno en segundos. Elegí el servicio, el día y la hora que mejor te venga.</p>
+        <a href="#reserva" class="btn btn-gold">Reservar ahora</a>
+      </div>
+      <div class="hero-card">
+        <div class="hero-decor"></div>
+        <div class="hero-info">
+          <p><strong>Horarios</strong></p>
+          <p>Lun a Sáb · 10:00 – 12:30</p>
+          <p>Lun a Sáb · 17:00 – 21:30</p>
+          <p>Domingos · Cerrado</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICIOS ============ -->
+  <section id="servicios" class="section">
+    <div class="container">
+      <h3 class="section-title">Nuestros servicios</h3>
+      <p class="section-sub">Seleccioná un servicio para reservar</p>
+      <div class="services-grid" id="servicesGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ RESERVA ============ -->
+  <section id="reserva" class="section section-dark">
+    <div class="container">
+      <h3 class="section-title light">Reservá tu turno</h3>
+      <p class="section-sub light">Completá el formulario y te esperamos</p>
+
+      <form id="bookingForm" class="booking-form" novalidate>
+        <div class="grid-2">
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Juan" required />
+          </div>
+          <div class="field">
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Pérez" required />
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="field">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="3435451818" required />
+          </div>
+          <div class="field">
+            <label for="servicio">Servicio</label>
+            <select id="servicio" name="servicio" required>
+              <option value="">Elegí un servicio</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="field">
+            <label for="fecha">Fecha</label>
+            <input type="date" id="fecha" name="fecha" required />
+          </div>
+          <div class="field">
+            <label>Hora</label>
+            <div id="horaHelp" class="hora-help">Elegí fecha y servicio para ver los horarios.</div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Horarios disponibles</label>
+          <div id="slotsGrid" class="slots-grid"></div>
+          <input type="hidden" id="hora" name="hora" required />
+        </div>
+
+        <div class="field">
+          <label for="observaciones">Observaciones</label>
+          <textarea id="observaciones" name="observaciones" rows="3" placeholder="Opcional"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-gold btn-block" id="submitBtn">
+          Confirmar turno
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ CONTACTO ============ -->
+  <footer id="contacto" class="footer">
+    <div class="container footer-inner">
+      <div>
+        <h4>Elegance Peluquería</h4>
+        <p>📍 <span id="direccion">Nogoyá, Entre Ríos</span></p>
+        <p>📞 <a href="tel:3435451818" id="telefonoLink">343 545-1818</a></p>
+        <p>
+          <a class="insta-link" id="instaDirect" href="#" target="_blank" rel="noopener">
+            📸 @barretojuan_2
+          </a>
+        </p>
+      </div>
+      <a class="wa-btn" id="waDirect" href="#" target="_blank" rel="noopener">
+        💬 WhatsApp
+      </a>
+    </div>
+    <p class="copy">© <span id="year"></span> Elegance · Todos los derechos reservados</p>
+  </footer>
+
+  <!-- ============ MODAL ============ -->
+  <div class="modal-overlay" id="modal" aria-hidden="true">
+    <div class="modal">
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- ============ LOADING ============ -->
+  <div class="loading-overlay" id="loading" aria-hidden="true">
+    <div class="spinner"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
